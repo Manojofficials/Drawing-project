@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doodle Space</title>
+  <link rel="stylesheet" href="drawingapp.css" />
+</head>
+<body>
+  <h1>Welcome to Doodle Space</h1>
+  <h3>Free Access! Enjoy The Doodle Platform.</h3>
+
+  <div class="toolbar">
+    <label>Color: <input type="color" id="colorPicker"></label>
+    <label>Brush Size: <input type="range" id="brushSize" min="1" max="50" value="5"></label>
+    
+    <button id="pencil">Pencil</button>
+    <button id="eraser">Eraser</button>
+    <button id="line">Line</button>
+    <button id="rect">Rectangle</button>
+    <button id="circle">Circle</button>
+
+    <button id="undo">Undo</button>
+    <button id="redo">Redo</button>
+    <button id="save">Save</button>
+    <label for="loadFile" class="load-label">Load</label>
+    <input type="file" id="loadFile" hidden />
+  </div>
+
+  <canvas id="drawingCanvas" width="1400" height="600"></canvas>
+
+  <script src="drawingapp.js"></script>
+</body>
+</html>

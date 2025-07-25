@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Algerian', sans-serif;
+  background-image: url('bg2.jpg');
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #020b0e;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #020b0e;
+}
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.95rem;
+}
+
+.toolbar input[type="color"],
+.toolbar input[type="range"] {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.load-label {
+  background-color: #2980b9;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.load-label:hover {
+  background-color: #1f6391;
+}
+
+.toolbar button {
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #4CAF50;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toolbar button:hover {
+  background-color: #3e9142;
+}
+
+#eraser { background-color: #f39c12; }
+#eraser:hover { background-color: #e67e22; }
+
+#undo, #redo { background-color: #3498db; }
+#undo:hover, #redo:hover { background-color: #2980b9; }
+
+#save { background-color: #2ecc71; }
+#save:hover { background-color: #27ae60; }
+
+#line, #rect, #circle {
+  background-color: #9b59b6;
+}
+
+#line:hover, #rect:hover, #circle:hover {
+  background-color: #8e44ad;
+}
+
+canvas {
+  border: 3px solid #2c3e50;
+  background-color: #ffffff;
+  border-radius: 8px;
+  max-width: 100%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  touch-action: none;
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+    width: 100%;
+    max-width: 90%;
+  }
+
+  canvas {
+    width: 100%;
+  }
+
+  .toolbar label,
+  .toolbar button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
